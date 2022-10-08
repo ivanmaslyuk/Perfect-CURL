@@ -130,11 +130,11 @@ extension CURLRequest.Option {
 			curl.setOption(CURLOPT_SSH_PRIVATE_KEYFILE, s: optString)
 		case .httpMethod(let optHTTPMethod):
 			switch optHTTPMethod {
-			case .get: curl.setOption(CURLOPT_CUSTOMREQUEST, s: "GET")
 			case .post: curl.setOption(CURLOPT_POST, int: 1)
 			case .head: curl.setOption(CURLOPT_NOBODY, int: 1)
 			case .patch: curl.setOption(CURLOPT_CUSTOMREQUEST, s: "PATCH")
-			case .delete,
+			case .get,
+			     .delete,
 			     .put,
 			     .trace,
 			     .options,
