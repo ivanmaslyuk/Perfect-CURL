@@ -123,7 +123,7 @@ extension CURLRequest.Option {
 		case .ftpPort(let optString):
 			curl.setOption(CURLOPT_FTPPORT, s: optString)
 		case .ftpResponseTimeout(let optInt):
-			curl.setOption(CURLOPT_FTP_RESPONSE_TIMEOUT, int: optInt)
+			curl.setOption(CURLOPT_SERVER_RESPONSE_TIMEOUT, int: optInt)
 		case .sshPublicKey(let optString):
 			curl.setOption(CURLOPT_SSH_PUBLIC_KEYFILE, s: optString)
 		case .sshPrivateKey(let optString):
